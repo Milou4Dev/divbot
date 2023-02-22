@@ -47,9 +47,9 @@ func PingCommand(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	// Met à jour le message avec la durée et les pings
 	embed := &discordgo.MessageEmbed{
-		Title:       "Pong!",
-		Description: fmt.Sprintf("Temps de réponse : %s\nPing de l'API : %s\nPing du bot : %s", duration, apiPing, s.HeartbeatLatency()),
-		Color:       0, // vert
+		Title:       "Vitesse du bot:",
+		Description: fmt.Sprintf("Temps de réponse : %s\nPing de l'API(Discord) : %s\nPing du bot : %s", duration, apiPing, s.HeartbeatLatency()),
+		Color:       434549, //Discord color
 	}
 	s.ChannelMessageEditEmbed(m.ChannelID, msg.ID, embed)
 }
