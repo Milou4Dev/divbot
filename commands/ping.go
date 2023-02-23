@@ -49,7 +49,7 @@ func PingCommand(s *discordgo.Session, m *discordgo.MessageCreate) {
 	embed := &discordgo.MessageEmbed{
 		Title:       "Vitesse du bot:",
 		Description: fmt.Sprintf("Temps de réponse : %s\nPing de l'API(Discord) : %s\nPing du bot : %s", duration, apiPing, s.HeartbeatLatency()),
-		Color:       88101242, //Discord color
+		Color:       27157218255, //Discord color
 	}
 	s.ChannelMessageEditEmbed(m.ChannelID, msg.ID, embed)
 }
